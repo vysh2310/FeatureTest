@@ -1,7 +1,7 @@
 
 
 
-@echo off
+
 
 set "search_string=Red"
 
