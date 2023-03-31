@@ -28,7 +28,7 @@ static void Med_scan_caller(void) {
     if (random_int() > 0) {
         Med_Recur(&x);     }
     break;
- //Feature 2 added
+ 
    
     default:
             //do nothing
