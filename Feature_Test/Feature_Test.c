@@ -6,7 +6,7 @@ static void Med_Recur(int* depth)
 {
     float advance;
  
-    *depth = *depth + 1;
+    *depth = *depth + 5;
     advance = 1.0f / (float)(*depth);  /* polyspace Defect:USELESS_WRITE "this is not an issue" */
  
  
@@ -28,8 +28,9 @@ static void Med_scan_caller(void) {
     break;
 
     case 2: 
- 
-    //add case2
+    if ((x > -4) && (x < -1)) {
+        Med_Recur(&x); 
+    }    
     break;
     
     default:
