@@ -28,10 +28,9 @@ static void Med_scan_caller(void) {
     if (random_int() > 0) {
         Med_Recur(&x);     }
     break;
- 
-   
+    
     default:
-            //do nothing
+            //do nothing here
    }
 }
 
