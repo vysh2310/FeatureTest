@@ -1,0 +1,47 @@
+name: Polyspace Action1 Demo
+on: [push]
+env:
+  PRJNAME: Feature_Test
+  RESULTS_DIR: results
+  ACCESS_HOST: psaccessp00gnb.mathworks.com
+  ACCESS_PATH: "/public/FeatureTest"
+  ACCESS_PASS: JDAJJPFAEMJFIKNGDNINHFPGKDGBDPLD
+     
+jobs: 
+  Polyspace-GitHubActions:
+    runs-on: [self-hosted, windows, x64, polyspace]
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: Ensure Env
+      run: |
+        echo "PATH=C:/Program Files/Polyspace/R2023a/polyspace/bin:$PATH" >> $GITHUB_ENV
+        echo "The job was automatically triggered by a ${{ github.event_name }} event."
+        echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+        echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."  
+    - name: Run analysis
+      run: |
+        echo "Running Polyspace analysis...."
+        polyspace-code-prover.exe -main-generator -sources C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c -results-dir ${{ env.RESULTS_DIR }}   
+        echo "This job's status is done"
+        polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
+        
+    - name: Send Email Notification     
+      uses: dawidd6/action-send-mail@v2        
+      with:      
+          server_address: mail.mathworks.com
+          server_port: 25
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: Polyspace Analysis Workflow Completed
+          body: 'The GitHub Actions workflow has completed successfully and has found defects after Polyspace Analysis.Click to view results on Polyspace Dashboard "http://psaccessp00gnb.mathworks.com"here, Polyspace Access.'
+          to: vhanumap@mathworks.com
+          from: vhanumap@mathworks.com
+          attachments: ${{ github.workspace }}/${{ env.PRJNAME }}.csv
+     
+          
+    - name: Upload to Polypace Access Dashboard
+      run: |
+        echo "Uploading Polyspace analysis..."
+        #polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -create-project ${{ env.ACCESS_PATH }}
+        #polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -upload ${{ env.RESULTS_DIR }} -parent-project ${{ env.ACCESS_PATH }} -project ${{ env.PRJNAME }}
