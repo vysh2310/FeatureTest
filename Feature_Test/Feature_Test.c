@@ -21,9 +21,10 @@ static void Med_scan_caller(void) {
  
  switch(button){
   //Feature 1 added
-   case 1: 
- 
-    //add case1
+   case 1:  
+     x = 10;
+    if (random_int() > 0) {
+        Med_Recur(&x);}
     break;
 
     case 2: 
