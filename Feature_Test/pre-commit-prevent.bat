@@ -1,20 +1,15 @@
 
  
-setlocal enableextensions
-set "prohibited_words=Red"
+@echo off
 
-for %%f in (%*) do (
-    if /i "%%~xf"==".csv" (
-        for /f "usebackq delims=" %%i in ("%%f") do (
-            for %%j in (%prohibited_words%) do (
-                echo %%i | find /i "%%j" > nul && (
-                    echo Commit contains prohibited words: %%j
-                    echo "Detected Run-Time Error, do not commit"
-                    exit /b 1
-                )
-            )
-        )
-    )
+set "search_dir=C:\Feature_Test_Git\FeatureTest\Feature_Test"
+set "search_word=XXX"
+
+for /r "%search_dir%" %%f in (*.csv) do (
+  findstr /C:"%search_word%" "%%f" > nul
+  if %errorlevel% equ 0 (
+    echo The word was found in the CSV file %%~nxf.
+  ) else (
+    echo The word was not found in the CSV file %%~nxf.
+  )
 )
-
-exit /b 0

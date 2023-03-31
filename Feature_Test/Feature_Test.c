@@ -21,7 +21,7 @@ static void Med_scan_caller(void) {
     char button = random_char();
  
  switch(button){
-   
+  
    case 1: 
  
     x = 10;
