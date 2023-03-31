@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: Polyspace Analysis Workflow Completed
-          body: 'The GitHub Actions workflow has completed successfully and has found defects after Polyspace Analysis.Click to view results on Polyspace Dashboard "http://psaccessp00gnb.mathworks.com"here, Polyspace Access.'
+          body: 'The GitHub Actions workflow has completed successfully and may have found defects after Polyspace Analysis.Click to view results on Polyspace Dashboard "http://psaccessp00gnb.mathworks.com"here, Polyspace Access.'
           to: vhanumap@mathworks.com
           from: vhanumap@mathworks.com
           attachments: ${{ github.workspace }}/${{ env.PRJNAME }}.csv
