@@ -1,7 +1,7 @@
 
  
 setlocal enableextensions
-set "prohibited_words=Defect"
+set "prohibited_words=Red"
 
 for %%f in (%*) do (
     if /i "%%~xf"==".csv" (
@@ -9,11 +9,12 @@ for %%f in (%*) do (
             for %%j in (%prohibited_words%) do (
                 echo %%i | find /i "%%j" > nul && (
                     echo Commit contains prohibited words: %%j
+                    echo "Detected Run-Time Error, do not commit"
                     exit /b 1
                 )
             )
         )
     )
 )
-echo "Detected Polyspace violations, do not commit"
+
 exit /b 0
