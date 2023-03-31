@@ -24,9 +24,12 @@ static void Med_scan_caller(void) {
   //Feature 1 added
    case 1: 
  
-    x = 10;
-    if (random_int() > 0) {
-        Med_Recur(&x);     }
+    //add case1
+    break;
+
+    case 2: 
+ 
+    //add case2
     break;
     
     default:
