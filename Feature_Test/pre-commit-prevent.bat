@@ -4,7 +4,7 @@
 set "search_dir=C:\Feature_Test_Git\FeatureTest\Feature_Test"
 set "search_word=Red"
 
-for /r "%search_dir%" %%f in (*.csv) do (
+for /r "%search_dir%" %%f in (temp2_analysis_result.csv) do (
   findstr /C:"%search_word%" "%%f" > nul
   if %errorlevel% equ 0 (
     echo The word was found in the CSV file,no to commit %%~nxf.
