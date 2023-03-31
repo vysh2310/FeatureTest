@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EDRS Version 2.0-->
+<global>
+   <file name="C:\\Feature_Test_Git\\FeatureTest\\Feature_Test\\Feature_Test.c" comment="">
+      <function name="Med_Recur" comment="" line="4" main_generator_called="MAIN_GENERATOR" attributes="static">
+         <pointer name="arg1" comment="" line="4" complete_type="int32 *" init_mode="MAIN_GENERATOR" init_modes_allowed="10" initialize_pointer="Not NULL" number_allocated="max" init_pointed="MAIN_GENERATOR">
+            <scalar comment="" line="4" base_type="int32" complete_type="int32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         </pointer>
+      </function>
+      <function name="Med_scan_caller" comment="" line="18" main_generator_called="MAIN_GENERATOR" attributes="static"/>
+      <function name="random_char" comment="" line="2" main_generator_called="disabled" attributes="extern">
+         <scalar name="return" comment="" line="2" base_type="int8" complete_type="int8" init_mode="PERMANENT" init_modes_allowed="4" init_range="min..max" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="random_int" comment="" line="1" main_generator_called="disabled" attributes="extern">
+         <scalar name="return" comment="" line="1" base_type="int32" complete_type="int32" init_mode="PERMANENT" init_modes_allowed="4" init_range="min..max" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+</global>

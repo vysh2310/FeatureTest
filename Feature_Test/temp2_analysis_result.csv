@@ -1,0 +1,24 @@
+ID	Family	Group	Color	New	Check	Information	Function	File	Status	Severity	Comment	Key
+23	Run-time Check	Control flow	Red	no	Non-terminating call		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		CC194EA80DC1
+12	Run-time Check	Numerical	Orange	no	Division by zero		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		9830B411B21327
+11	Run-time Check	Numerical	Green	no	Overflow		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		31603DB264894C9C
+10	Run-time Check	Numerical	Green	no	Overflow		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		31603DB264898C98
+4	Run-time Check	Numerical	Green	no	Overflow		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		9C4FAC19622306
+15	Run-time Check	Data flow	Green	no	Non-initialized variable		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4C994E9259C1
+9	Run-time Check	Data flow	Green	no	Non-initialized variable		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		98309C25B22327
+3	Run-time Check	Data flow	Green	no	Non-initialized variable		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4E2749ACC499
+16	Run-time Check	Data flow	Green	no	Non-initialized pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		98349C25821307
+13	Run-time Check	Data flow	Green	no	Non-initialized pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4C994E9241C9
+7	Run-time Check	Data flow	Green	no	Non-initialized pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		98309C25823306
+5	Run-time Check	Data flow	Green	no	Non-initialized pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		2793A4506A
+1	Run-time Check	Data flow	Green	no	Non-initialized pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4E2749A0C4A1
+14	Run-time Check	Static memory	Green	no	Illegally dereferenced pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4C99498841C1
+8	Run-time Check	Static memory	Green	no	Illegally dereferenced pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		98309211822327
+6	Run-time Check	Static memory	Green	no	Illegally dereferenced pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		2752225068
+2	Run-time Check	Static memory	Green	no	Illegally dereferenced pointer		Med_Recur()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		4EA444A0C499
+22	Run-time Check	Data flow	Green	no	Non-initialized local variable		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		3362394A65898C98
+21	Run-time Check	Data flow	Green	no	Non-initialized local variable		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		99319C25B2C427
+19	Run-time Check	Data flow	Green	no	Non-initialized local variable		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		19329C25B2C407
+20	Run-time Check	Data flow	Green	no	Return value not initialized		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		8C1B49A459C1
+18	Run-time Check	Data flow	Green	no	Return value not initialized		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		19309249B21307
+17	Run-time Check	Data flow	Green	no	Return value not initialized		Med_scan_caller()	C:\Feature_Test_Git\FeatureTest\Feature_Test\Feature_Test.c	Unreviewed	Unset		98399249B21346

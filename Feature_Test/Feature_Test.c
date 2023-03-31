@@ -6,7 +6,7 @@ static void Med_Recur(int* depth)
 {
     float advance;
  
-    *depth = *depth + 1;
+    *depth = *depth + 5;
     advance = 1.0f / (float)(*depth);  /* polyspace Defect:USELESS_WRITE "this is not an issue" */
  
  
