@@ -1,6 +1,5 @@
 
- 
-@echo off
+
 
 set "search_dir=C:\Feature_Test_Git\FeatureTest\Feature_Test"
 set "search_word=Red"
