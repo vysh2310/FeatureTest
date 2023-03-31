@@ -1,14 +1,31 @@
 
 
 
-set "search_dir=C:\Feature_Test_Git\FeatureTest\Feature_Test"
-set "search_word=Red"
+@echo off
 
-for /r "%search_dir%" %%f in (temp2_analysis_result.csv) do (
-  findstr /C:"%search_word%" "%%f" > nul
-  if %errorlevel% equ 0 (
-    echo The word was found in the CSV file,no to commit %%~nxf.
-  ) else (
-    echo The word was not found in the CSV file %%~nxf.
+set "search_string=Red"
+
+set "filename=%1"
+
+if not exist "%filename%" (
+  echo File not found: %filename%
+  exit /b 1
+)
+
+set "match_found=false"
+
+for /f "usebackq tokens=*" %%a in ("%filename%") do (
+  set "line=%%a"
+  if "!line:%search_string%=!" neq "!line!" (
+    set "match_found=true"
+    echo String found: %search_string%
+    echo Do not commit, there is a Bug in the code!
+    exit /b 1
   )
 )
+
+if "%match_found%"=="false" (
+  echo String not found: %search_string%
+  exit /b 0
+)
+
