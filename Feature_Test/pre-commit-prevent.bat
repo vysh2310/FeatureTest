@@ -23,7 +23,6 @@ for /f "usebackq tokens=*" %%a in ("%filename%") do (
     exit /b 1
   )
 )
-
 if "%match_found%"=="false" (
   echo String not found: %search_string%
   exit /b 0
