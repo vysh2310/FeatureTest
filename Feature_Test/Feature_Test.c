@@ -34,7 +34,7 @@ static void Med_scan_caller(void) {
     break;
     
     default:
-            //do nothing here
+            //nothing to do here
    }
 }
 
